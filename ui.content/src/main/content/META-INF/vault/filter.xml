@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/adobecodechallenge" mode="merge"/>
+    <filter root="/content/adobecodechallenge" mode="merge"/>
+    <filter root="/content/dam/adobecodechallenge" mode="merge">
+        <exclude pattern="/content/dam/adobecodechallenge(/.*)?"/>
+        <include pattern="/content/dam/adobecodechallenge/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/adobecodechallenge/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/adobecodechallenge" mode="merge"/>
+</workspaceFilter>

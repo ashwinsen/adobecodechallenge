@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/adobecodechallenge/clientlibs"/>
+    <filter root="/apps/adobecodechallenge/components"/>
+    <filter root="/apps/adobecodechallenge/i18n"/>
+</workspaceFilter>
