@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2023-04-14T13:50:55.123+10:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/adobecodechallenge/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Event Details"
+        jcr:uuid="a80cbf03-dd7a-40e7-849c-fd655feee4b4"
+        sling:resourceType="adobecodechallenge/components/page"
+        pageTitle="Adobe Code Challenge">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="adobecodechallenge/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="adobecodechallenge/components/container">
+                <title
+                    jcr:lastModified="{Date}2023-04-14T13:50:55.117+10:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Adobe Event Details"
+                    sling:resourceType="adobecodechallenge/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="adobecodechallenge/components/container"
+                    layout="responsiveGrid">
+                    <image
+                        jcr:created="{Date}2023-04-14T13:32:31.050+10:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-04-14T13:35:37.170+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Looking forward for the Upcoming Event"
+                        sling:resourceType="adobecodechallenge/components/image"
+                        alt="Gray lava rock formation"
+                        altValueFromDAM="false"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        fileReference="/content/dam/core-components-examples/library/sample-assets/lava-rock-formation.jpg"
+                        imageFromPageImage="false"
+                        isDecorative="false"
+                        linkTarget="_self"
+                        titleValueFromDAM="false"/>
+                    <text
+                        jcr:created="{Date}2023-04-14T13:40:27.730+10:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-04-14T13:48:30.048+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="adobecodechallenge/components/text"
+                        text="&lt;p>We are pleased to announce the 3 day Event&amp;nbsp; about Adobe's New Features . To register for this event, select this &lt;a href=&quot;https://google.com&quot;>link&lt;/a> or follow the button below&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <button
+                        jcr:created="{Date}2023-04-14T13:48:36.829+10:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-04-14T13:49:25.144+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Register !!"
+                        sling:resourceType="adobecodechallenge/components/button"
+                        linkTarget="_self"
+                        linkURL="https://google.com"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
