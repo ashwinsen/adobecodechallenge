@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.sling.api.request.RequestParameterMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import adobe.codechallenge.core.exception.ValidationException;
 
@@ -63,7 +67,7 @@ public class EventData {
 		}
 	}
 	
-	public void validate() throws ValidationException {
+	public List<String> getAnyAttributesEmpty() throws ValidationException {
 		List<String> missingDatas = new ArrayList<String>();
 		if(StringUtils.isEmpty(getFirstName())) {
 			missingDatas.add("firstName");
@@ -74,13 +78,15 @@ public class EventData {
 		if(StringUtils.isEmpty(getEmail())) {
 			missingDatas.add("email");
 		}
-		if(missingDatas.size() > 0) {
-			String missingDataItems = "";
-			for(String missingItem:missingDatas) {
-				missingDataItems = missingDataItems + " ," +missingItem;
-			}
-			missingDataItems = missingDataItems.substring(0, missingDataItems.length() - 2);
-			throw new ValidationException(missingDataItems);
-		}
+		return missingDatas;
 	}
+
+	public List<NameValuePair> getNameValuePair() {
+		List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>();
+		nameValuePair.add(new BasicNameValuePair("firstName", firstName));
+		nameValuePair.add(new BasicNameValuePair("lastName", lastName));
+		nameValuePair.add(new BasicNameValuePair("email", email));
+		return nameValuePair;
+	}
+	
 }
